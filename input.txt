@@ -1,0 +1,14 @@
+Driver Jason
+Driver Zelda
+Driver Ted
+Driver Jen
+Driver Yolanda
+Driver Joe
+Driver Will
+Trip Jason 09:20 09:40 17.3
+Trip Jason 14:10 14:56 21.8
+Trip Zelda 12:01 13:16 42.0
+Trip Ted 11:10 11:44 16.0
+Trip Will 11:33 13:01 61.4
+Trip Jen 17:22 18:33 49.3
+Trip Yolanda 10:55 14:01 198.1
