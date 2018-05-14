@@ -1,10 +1,8 @@
-Michael Weaver
-michd.weaver@gmail.com
+Root Insurance Kata
+Michael D Weaver
 4/23/2018
 
--------
-Root Insurance - drivers kata
--------
+This is a short program designed to read a list of drivers and a record of each of their trips (with a start time, end time, and miles driven) from an input file, and write a line for each driver to an output file, with the driver's total miles driven and average speed, arranged by each driver's total miles (highest to lowest).
 
 -------
 classes
@@ -53,6 +51,4 @@ The second step is by far the most involved, and rather than building out get_dr
 
 I tried to keep the numerical data in the most convenient format for calculations up until the last function formats it for file writing. For example, when parsing the trip start and end times, I decided to convert the duration in minutes to a floating decimal as a portion of hours, since that time will be used to calculate mph. Each driver's total miles and average speed are kept in decimal form until write_output(), where they are rounded to integers and converted to strings in the same line, for purposes of writing to the file.
 
-One thing I changed after most of the program was finished was to pass arguments for filenames to read_input() and write_output(). I had originally hard-coded the filenames directly into the functions, but then I remembered I needed to run the same functions in both the program and the tests, and I thought it best to use a different file in the tests. I decided on creating a class named TextFiles, with properties for an input and output filename. It might not have been necessary here, but I felt like that approach would work much better if the program were ever modified or expanded.
-
-Another late change I made was to erase the output file in write_output() just before writing new lines. Although it wasn't spelled out in the instructions, it seemed like a commonsense feature, and it saved me the trouble of manually deleting dozens of lines every so often as I was trying out my program. I was tempted to build in more functionality (for example, accounting for trips that go past midnight), but I tried to stick fairly close to the desired level of detail.
+One thing I changed after most of the program was finished was to pass arguments for filenames to read_input() and write_output(). I had originally hard-coded the filenames directly into the functions, but then I remembered I needed to run the same functions in both the program and the tests, and I thought it best to use a different file in the tests. I decided on creating a class named TextFiles, with properties for an input and output filename, which I felt would work much better if the program were ever modified or expanded.
