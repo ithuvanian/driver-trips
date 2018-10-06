@@ -1,0 +1,7 @@
+Yolanda: 198 miles @ 64 mph
+Will: 61 miles @ 42 mph
+Jen: 49 miles @ 42 mph
+Zelda: 42 miles @ 34 mph
+Jason: 39 miles @ 36 mph
+Ted: 16 miles @ 28 mph
+Joe: 0 miles
