@@ -109,5 +109,9 @@ def write_output(driver_list, op_file):
 
 files = TextFiles('input.txt', 'output.txt')
 ip_lines = read_input(files.ip)
+for line in ip_lines:
+    print(line)
 driver_list = get_drivers(ip_lines)
+for driver in driver_list:
+        print(driver)
 write_output(driver_list, files.op)
