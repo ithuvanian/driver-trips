@@ -33,6 +33,16 @@ class TextFiles():
         self.op = op
 
 
+def read_input(ip_file):
+    """Read input file, create a list of lists from each line."""
+    with open(ip_file) as ip:
+        ip_lines = []
+        for line in ip:
+            line_data = line.split()
+            ip_lines.append(line_data)
+    return ip_lines
+
+
 def get_duration(trip):
     """Return total time of each trip in hours."""
     start_hhmm = trip.starting.split(':')
@@ -68,16 +78,6 @@ def get_speed(driver_list):
     return driver_list
 
 
-def read_input(ip_file):
-    """Read input file, create a list of lists from each line."""
-    with open(ip_file) as ip:
-        ip_lines = []
-        for line in ip:
-            line_data = line.split()
-            ip_lines.append(line_data)
-    return ip_lines
-
-
 def get_drivers(ip_lines):
     """Get data on drivers."""
     driver_list = []
@@ -109,9 +109,5 @@ def write_output(driver_list, op_file):
 
 files = TextFiles('input.txt', 'output.txt')
 ip_lines = read_input(files.ip)
-for line in ip_lines:
-    print(line)
 driver_list = get_drivers(ip_lines)
-for driver in driver_list:
-        print(driver)
 write_output(driver_list, files.op)
